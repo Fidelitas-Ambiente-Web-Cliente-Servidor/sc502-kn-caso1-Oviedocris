@@ -1,0 +1,232 @@
+/* ESTILOS GENERALES */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+hr{
+    margin:40px 0;
+    border:none;
+    border-top:2px solid #ddd;
+}
+
+/* HEADER*/
+
+.header{
+    background:#0b5d3b;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.header h1{
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:18px;
+}
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    background:#333;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0b5d3b;
+}
+
+button:disabled{
+    background:#999;
+    cursor:not-allowed;
+}
+
+/* Botón activo del filtro */
+button.activo{
+    background:#c98900;
+}
+
+/* CARDS DEL MENÚ*/
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card-plato{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card-plato:hover{
+    transform:translateY(-5px);
+}
+
+.card-plato img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.precio{
+    color:#0b5d3b;
+    font-weight:bold;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/*FORMULARIO */
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+/* Clase obligatoria */
+.error-campo{
+    color:red;
+    font-size:14px;
+    margin-top:4px;
+    margin-bottom:8px;
+    min-height:18px;
+}
+
+/* TABLA*/
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin-top:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+th{
+    background:#0b5d3b;
+    color:white;
+}
+
+th,
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+/* Clase obligatoria */
+.fila-reserva{
+    transition:.3s;
+}
+
+/* Resaltar reservas grandes */
+.fila-reserva.destacada{
+    background:#fff3c4;
+    font-weight:bold;
+}
+
+/* RESUMEN*/
+
+/* Clase obligatoria */
+.resumen-reservas{
+    background:white;
+    margin-top:25px;
+    padding:20px;
+    border-left:6px solid #0b5d3b;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.resumen-reservas h3{
+    margin-bottom:15px;
+}
+
+.resumen-reservas p{
+    margin-bottom:8px;
+}
+
+// RESPONSIVE
+
+    .botones{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+
+
+.card-plato img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    background:#eee;
+}

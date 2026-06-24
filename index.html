@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas -  El Túcan </title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1> Soda  El Túcan </h1>
+        <p>Disfruta nuestros mejores platillos</p>
+    </header>
+
+    <main class="contenedor">
+
+       
+        <!-- MENÚ -->
+        
+
+        <section>
+
+            <h2>Menú del Restaurante</h2>
+
+            <div class="botones">
+
+                <button class="activo" onclick="filtrarCategoria('Todos')">
+                    Todos
+                </button>
+
+                <button onclick="filtrarCategoria('Entrada')">
+                    Entradas
+                </button>
+
+                <button onclick="filtrarCategoria('Plato Fuerte')">
+                    Platos Fuertes
+                </button>
+
+                <button onclick="filtrarCategoria('Postre')">
+                    Postres
+                </button>
+
+            </div>
+
+            <div id="menuContainer" class="menu-grid">
+
+                
+            </div>
+
+        </section>
+
+        <hr>
+
+        
+        <!-- FORMULARIO -->
+       
+
+        <section>
+
+            <h2>Reserva tu mesa</h2>
+
+            <form id="formReserva">
+
+                <label>Nombre completo</label>
+                <input type="text" id="nombre">
+                <div id="errorNombre" class="error-campo"></div>
+
+                <label>Correo electrónico</label>
+                <input type="email" id="correo">
+                <div id="errorCorreo" class="error-campo"></div>
+
+                <label>Fecha</label>
+                <input type="date" id="fecha">
+                <div id="errorFecha" class="error-campo"></div>
+
+                <label>Hora</label>
+
+                <select id="hora">
+                    <option value="">Seleccione</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>18:00</option>
+                    <option>19:00</option>
+                    <option>20:00</option>
+                </select>
+
+                <label>Número de personas</label>
+
+                <input type="number" id="personas">
+
+                <div id="errorPersonas" class="error-campo"></div>
+
+                <label>Comentarios</label>
+
+                <textarea id="comentarios" rows="4"></textarea>
+
+                <br><br>
+
+                <button id="btnEnviar" type="submit" disabled>
+
+                    Registrar Reserva
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+       
+        <!-- TABLA -->
+      
+
+        <section>
+
+            <h2>Reservas Registradas</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Personas</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaReservas">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        
+        <!-- RESUMEN -->
+        
+
+        <section>
+
+            <div id="resumen" class="resumen-reservas">
+
+                <h3>Resumen</h3>
+
+                <p>Total de reservas: <span id="totalReservas">0</span></p>
+
+                <p>Total de personas: <span id="totalPersonas">0</span></p>
+
+                <p>Mayor reserva: <span id="mayorReserva">0</span></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
